@@ -1,0 +1,94 @@
+.
+├── app.py
+├── application/
+│   ├── celeryconfig.py
+│   ├── config.py
+│   ├── controllers/
+│   │   ├── api/
+│   │   │   ├── booking.py
+│   │   │   ├── login.py
+│   │   │   ├── search.py
+│   │   │   ├── shows.py
+│   │   │   └── theater.py
+│   │   ├── controllers.py
+│   │   └── validate.py
+│   ├── marshal.py
+│   ├── models.py
+│   ├── tasks.py
+│   └── workers.py
+├── celerybeat-schedule.bak
+├── celerybeat-schedule.dat
+├── celerybeat-schedule.dir
+├── instance/
+│   └── TicketTalesV2.sqlite3
+├── local_run.sh
+├── local_setup.sh
+├── MailHog_windows_386.exe
+├── monthly_report.pdf
+├── requirements.txt
+├── static/
+│   ├── css/
+│   │   ├── home.css
+│   │   ├── login.css
+│   │   └── style.css
+│   ├── img/
+│   │   ├── badge.png
+│   │   ├── Black.png
+│   │   ├── loginBG.png
+│   │   ├── solid black.png
+│   │   ├── solid white.png
+│   │   ├── theaterBG.png
+│   │   └── White.png
+│   └── js/
+│       ├── About.js
+│       ├── AddShow.js
+│       ├── AddTheater.js
+│       ├── AdminHome.js
+│       ├── Adminlog.js
+│       ├── AdminReg.js
+│       ├── AdminSearch.js
+│       ├── AdminTheater.js
+│       ├── BookShow.js
+│       ├── EditShow.js
+│       ├── EditTheater.js
+│       ├── Home.js
+│       ├── Index.js
+│       ├── Invoice.js
+│       ├── Login.js
+│       ├── MyShows.js
+│       ├── Register.js
+│       ├── Router.js
+│       ├── Search.js
+│       └── Theater.js
+└── templates/
+    ├── index.html
+    ├── monthly_report.html
+    └── theater_pdf.html
+
+
+
+
+.
+├── app.py
+├── application/
+│   ├── config.py
+│   ├── controllers/
+│   │   ├── api --> Contains all the code for APIs
+│   │   ├── controllers.py
+│   │   └── validate.py
+│   ├── marshal.py
+│   ├── models.py
+│   ├── tasks.py
+│   └── workers.py
+├── instance/
+│   └── TicketTalesV2.sqlite3
+├── requirements.txt
+├── static/
+│   ├── css --> Cantains all the css
+│   ├── img --> Conatins all the required images
+│   └── js --> Conatins all the js files
+├── templates/
+│   ├── index.html
+│   ├── monthly_report.html
+│   └── theater_pdf.html
+└── venv

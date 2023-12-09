@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="static/css/home.css"> -->
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #6600cc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	margin: -20px 0 50px;
+	position: relative;
+}
+
+h1 {
+	display: block ;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-left: 50px;
+	color: #6600cc;
+}
+
+h3 {
+	font-weight: bold;
+	margin-bottom: 20px;
+	margin-left: 50px;
+	color: #6600cc;
+}
+
+h2 {
+    margin-left: 15px;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 100;
+	letter-spacing: 0.5px;
+	margin-top: 0px;
+	margin-left: 15px;
+}
+
+span {
+	font-size: 12px;
+    margin-top: 40px;
+}
+
+a {
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+
+nav {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 80px;
+    padding: 0 20px;
+    margin-top: 7px;
+    margin-left: 50vw;
+    width: 100%;
+    background: #6600cc;
+    color: #fff;
+    z-index: 10;
+}
+  
+.container {
+	background-image: url("/static/img/theaterBG.png");
+	background-size: cover;
+    display: flex;
+	flex-direction: row;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+	margin: 20px;
+    align-items: center;
+	justify-content: center;
+    margin: 20px 2vw;
+    width: 28vw;
+}
+
+
+
+.container:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transform: scale(1.02);
+    transition: all 0.5s ease 0s;
+	cursor: pointer;
+}
+.container h1{
+	color: #6600cc;
+	font-size: 30px;
+	align-self: auto;
+	margin-top: 30px;
+	margin-left: 170px;
+}
+
+
+span{
+    width: 90px;
+    display: block;
+    margin-left: -44px;
+    font-size: 18px;
+    margin-top: 0;
+    text-transform: capitalize;
+}
+
+.container-2 {
+	display: flex;
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	margin: 40px;
+	width: 93vw;
+	max-width: 100%;
+	min-height: 600px;
+}
+
+.theater-details{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFFFFF;
+    /* padding-left: 35px; */
+    align-items: center;
+}
+
+.shows{
+	background-color: rgba(255,255,255,0.3);
+	align-items: center;
+}
+
+.shows h2{
+	color: #6600cc;
+	font-size: 30px;
+	text-align: center;
+}
+
+.show-details {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	color: #000;
+}
+
+.error {
+	color: red;
+	position: absolute;
+	margin-top: 100px;
+	text-align: center;
+	align-items: center;
+	margin-left: 550px;
+}
+
+.icons{
+	margin-left: 25px;
+    font-size: 20px;
+	color: #6600cc;
+	cursor: pointer;
+}
+
+table{
+	width:100%;
+	table-layout: fixed;
+	padding: 0 35px;
+	/* border: 1px solid #000; */
+}
+
+th{
+	padding: 20px 15px;
+	font-weight: 500;
+	font-size: 13px;
+	color: #000;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+tr{
+	border-top: 1px solid #000;
+}
+
+td{
+	padding: 15px;
+	text-align: center;
+	vertical-align:middle;
+	font-weight: 300;
+	font-size: 13px;
+	color: #000;
+	border-top: 1px solid #ccc;
+}
+
+    </style>
+    <title>Theater Pdf</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>TicketTales</h2>
+            <p>Get Your Tickets Done in no time with TicketTales</p>
+        </nav>
+
+    </header>
+    <div class="theater-details">
+        <h2>{{ theater.name }}</h2>
+        <p>Adress: {{ theater.address }}</p>
+        <p>City: {{ theater.city }}</p>
+        <p>State: {{ theater.state }}</p>
+        <p>Capacity: {{ theater.capacity }}</p>
+      </div>
+  
+      <div class="container-2">
+        <div class="shows">
+          <h2>Available Shows</h2>
+          <div class="show">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <thead>
+                <tr>
+                  <th>Show ID</th>
+                  <th>Show Name</th>
+                  <th>Date</th>
+                  <th>Start Time</th>
+                  <th>End Time</th>
+                  <th>Tags</th>
+                  <th>Rating</th>
+                  <th>Price</th>
+                  <th>Theater</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for show in show %}
+                <tr>
+                  <td>{{ show.show_id }}</td>
+                  <td>{{ show.name }}</td>
+                  <td>{{ show.date }}</td>
+                  <td>{{ show.start_time }}</td>
+                  <td>{{ show.end_time }}</td>
+                  <td>{{ show.tags }}</td>
+                  <td>{{ show.rating }}</td>
+                  <td>{{ show.price }}</td>
+                  <td>{{ show.theater_id }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          {% if show|length == 0 %}
+          <div class="error">
+              <p>There are no shows available for this venue</p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+</body>
+</html>
