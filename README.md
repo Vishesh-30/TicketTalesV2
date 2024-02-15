@@ -1,4 +1,4 @@
-# TicketTales
+# TicketTalesV2
 
 TicketTales is a modern ticketing platform that allows users to book tickets for various shows and events at different theatres. This project utilizes Flask for the backend API development and Vue.js for the frontend interface. It also leverages Celery and Redis for background task management and caching.
 
