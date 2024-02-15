@@ -35,8 +35,6 @@ TicketTales is a modern ticketing platform that allows users to book tickets for
 
 ## Contributors
 
-- [Your Name](https://github.com/Vishesh-30)
+- [Vishesh](https://github.com/Vishesh-30)
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
